@@ -3,9 +3,11 @@ let addButton = document.getElementById("addButton");
 let tasksContainer = document.getElementById("tasksToDoContainer");
 
 addButton.onclick = function() {
-    if(taskInput.value = ""){
-        window.alert("nigga");
+    if (taskInput.value.trim() === "") {
+        window.alert("Please enter a task.");
+        return;
     }
+    
     let taskText = document.createElement("li");
     tasksContainer.appendChild(taskText);
     taskText.innerText = taskInput.value;
